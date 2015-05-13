@@ -13,9 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        //let k = NSBundle.mainBundle().infoDictionary
         // Override point for customization after application launch.
+        
+        MAMapServices.sharedServices().apiKey = "9c7be84c0f8768685f776feff70cd238"
+        
         return true
     }
 

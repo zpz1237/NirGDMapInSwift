@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB501BED1B018D5600E7226D /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB501BEC1B018D5600E7226D /* MAMapKit.framework */; };
+		DB501BEF1B018D6400E7226D /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB501BEE1B018D6400E7226D /* AMapSearchKit.framework */; };
+		DB501BF11B018DE600E7226D /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB501BF01B018DE600E7226D /* AMap.bundle */; };
+		DB501BF31B018E3F00E7226D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB501BF21B018E3F00E7226D /* UIKit.framework */; };
+		DB501BF51B018E4E00E7226D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB501BF41B018E4E00E7226D /* Foundation.framework */; };
+		DB501BF71B018E8E00E7226D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB501BF61B018E8E00E7226D /* CoreGraphics.framework */; };
+		DB501BF91B018E9700E7226D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB501BF81B018E9700E7226D /* QuartzCore.framework */; };
+		DB501BFB1B018EA100E7226D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB501BFA1B018EA100E7226D /* OpenGLES.framework */; };
+		DB501BFD1B018EA800E7226D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB501BFC1B018EA800E7226D /* CoreLocation.framework */; };
+		DB501BFF1B018EB100E7226D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB501BFE1B018EB100E7226D /* CoreTelephony.framework */; };
+		DB501C011B018EBC00E7226D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB501C001B018EBC00E7226D /* SystemConfiguration.framework */; };
+		DB501C031B018ED500E7226D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DB501C021B018ED500E7226D /* libz.dylib */; };
+		DB501C051B018EEA00E7226D /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DB501C041B018EEA00E7226D /* libstdc++.6.0.9.dylib */; };
+		DB501C071B018EF000E7226D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB501C061B018EF000E7226D /* Security.framework */; };
 		DBE9A7A51AFCCC610000445C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE9A7A41AFCCC610000445C /* AppDelegate.swift */; };
 		DBE9A7A71AFCCC610000445C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE9A7A61AFCCC610000445C /* ViewController.swift */; };
 		DBE9A7AA1AFCCC610000445C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE9A7A81AFCCC610000445C /* Main.storyboard */; };
@@ -26,6 +40,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB501BEC1B018D5600E7226D /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		DB501BEE1B018D6400E7226D /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
+		DB501BF01B018DE600E7226D /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = MAMapKit.framework/Versions/2.5.0.ce99742/Resources/AMap.bundle; sourceTree = "<group>"; };
+		DB501BF21B018E3F00E7226D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DB501BF41B018E4E00E7226D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DB501BF61B018E8E00E7226D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DB501BF81B018E9700E7226D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DB501BFA1B018EA100E7226D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		DB501BFC1B018EA800E7226D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DB501BFE1B018EB100E7226D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		DB501C001B018EBC00E7226D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DB501C021B018ED500E7226D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DB501C041B018EEA00E7226D /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		DB501C061B018EF000E7226D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DB501C0A1B01BAAA00E7226D /* AMapDemoSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AMapDemoSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		DBE9A79F1AFCCC610000445C /* GDTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GDTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE9A7A31AFCCC610000445C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBE9A7A41AFCCC610000445C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +72,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB501C031B018ED500E7226D /* libz.dylib in Frameworks */,
+				DB501C071B018EF000E7226D /* Security.framework in Frameworks */,
+				DB501C011B018EBC00E7226D /* SystemConfiguration.framework in Frameworks */,
+				DB501BFD1B018EA800E7226D /* CoreLocation.framework in Frameworks */,
+				DB501BFB1B018EA100E7226D /* OpenGLES.framework in Frameworks */,
+				DB501BFF1B018EB100E7226D /* CoreTelephony.framework in Frameworks */,
+				DB501BEF1B018D6400E7226D /* AMapSearchKit.framework in Frameworks */,
+				DB501BED1B018D5600E7226D /* MAMapKit.framework in Frameworks */,
+				DB501BF71B018E8E00E7226D /* CoreGraphics.framework in Frameworks */,
+				DB501BF31B018E3F00E7226D /* UIKit.framework in Frameworks */,
+				DB501BF51B018E4E00E7226D /* Foundation.framework in Frameworks */,
+				DB501BF91B018E9700E7226D /* QuartzCore.framework in Frameworks */,
+				DB501C051B018EEA00E7226D /* libstdc++.6.0.9.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +98,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB501C081B018EFA00E7226D /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				DB501C061B018EF000E7226D /* Security.framework */,
+				DB501C041B018EEA00E7226D /* libstdc++.6.0.9.dylib */,
+				DB501C021B018ED500E7226D /* libz.dylib */,
+				DB501C001B018EBC00E7226D /* SystemConfiguration.framework */,
+				DB501BFE1B018EB100E7226D /* CoreTelephony.framework */,
+				DB501BFC1B018EA800E7226D /* CoreLocation.framework */,
+				DB501BFA1B018EA100E7226D /* OpenGLES.framework */,
+				DB501BF81B018E9700E7226D /* QuartzCore.framework */,
+				DB501BF61B018E8E00E7226D /* CoreGraphics.framework */,
+				DB501BF41B018E4E00E7226D /* Foundation.framework */,
+				DB501BF21B018E3F00E7226D /* UIKit.framework */,
+				DB501BF01B018DE600E7226D /* AMap.bundle */,
+				DB501BEE1B018D6400E7226D /* AMapSearchKit.framework */,
+				DB501BEC1B018D5600E7226D /* MAMapKit.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
 		DBE9A7961AFCCC610000445C = {
 			isa = PBXGroup;
 			children = (
+				DB501C0A1B01BAAA00E7226D /* AMapDemoSwift-Bridging-Header.h */,
+				DB501C081B018EFA00E7226D /* Framework */,
 				DBE9A7A11AFCCC610000445C /* GDTest */,
 				DBE9A7B71AFCCC620000445C /* GDTestTests */,
 				DBE9A7A01AFCCC610000445C /* Products */,
@@ -194,6 +259,7 @@
 			files = (
 				DBE9A7AA1AFCCC610000445C /* Main.storyboard in Resources */,
 				DBE9A7AF1AFCCC610000445C /* LaunchScreen.xib in Resources */,
+				DB501BF11B018DE600E7226D /* AMap.bundle in Resources */,
 				DBE9A7AC1AFCCC610000445C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,9 +406,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = GDTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AMapDemoSwift-Bridging-Header.h";
+				"SWIFT_OPTIMIZATION_LEVEL[arch=*]" = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +423,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = GDTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AMapDemoSwift-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +488,7 @@
 				DBE9A7C01AFCCC620000445C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBE9A7C11AFCCC620000445C /* Build configuration list for PBXNativeTarget "GDTestTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +497,7 @@
 				DBE9A7C31AFCCC620000445C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
