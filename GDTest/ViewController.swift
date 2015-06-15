@@ -8,19 +8,52 @@
 
 import UIKit
 
-class ViewController: UIViewController, MAMapViewDelegate, UIGestureRecognizerDelegate {
+class ViewController: UIViewController, MAMapViewDelegate, AMapSearchDelegate {
 
     var mapView: MAMapView?
+    var search: AMapSearchAPI?
     var locationButton: UIButton?
-//    var currentPinch: UIPinchGestureRecognizer?
     var zoomButtonIn: UIButton?
     var zoomButtonOut: UIButton?
+    var currentLocation: CLLocation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.initMapView()
         self.initControls()
+        self.initSearch()
+    }
+    
+    func reGeoAction() {
+        
+        if (currentLocation != nil) {
+            
+            var request = AMapReGeocodeSearchRequest()
+            request.location = AMapGeoPoint.locationWithLatitude(CGFloat(currentLocation!.coordinate.latitude), longitude: CGFloat(currentLocation!.coordinate.longitude))
+            
+            search?.AMapReGoecodeSearch(request)
+        }
+    }
+    
+    func onReGeocodeSearchDone(request: AMapReGeocodeSearchRequest!, response: AMapReGeocodeSearchResponse!) {
+        
+        var addressTitle = response.regeocode.addressComponent.city
+        if addressTitle == nil {
+            addressTitle = response.regeocode.addressComponent.province
+        }
+        
+        mapView?.userLocation.title = addressTitle
+        mapView?.userLocation.subtitle = response.regeocode.formattedAddress
+        
+    }
+    
+    func searchRequest(request: AnyObject!, didFailWithError error: NSError!) {
+        println("\(error)")
+    }
+    
+    func initSearch() {
+        search = AMapSearchAPI(searchKey: "9c7be84c0f8768685f776feff70cd238", delegate: self)
     }
     
     func initControls() {
@@ -75,6 +108,12 @@ class ViewController: UIViewController, MAMapViewDelegate, UIGestureRecognizerDe
         
     }
     
+    func mapView(mapView: MAMapView!, didSelectAnnotationView view: MAAnnotationView!) {
+        if view.annotation.isKindOfClass(MAUserLocation) {
+            self.reGeoAction()
+        }
+    }
+    
     func mapView(mapView: MAMapView!, didChangeUserTrackingMode mode: MAUserTrackingMode, animated: Bool) {
         if mode == MAUserTrackingMode.None {
             locationButton?.setImage(UIImage(named: "location_no"), forState: UIControlState.Normal)
@@ -83,6 +122,11 @@ class ViewController: UIViewController, MAMapViewDelegate, UIGestureRecognizerDe
             locationButton?.setImage(UIImage(named: "location_yes"), forState: UIControlState.Normal)
             println("改变图片为yes")
         }
+    }
+    
+    func mapView(mapView: MAMapView!, didUpdateUserLocation userLocation: MAUserLocation!, updatingLocation: Bool) {
+        //获取当前经纬度
+        currentLocation = userLocation.location
     }
     
     func initMapView() {
@@ -96,11 +140,6 @@ class ViewController: UIViewController, MAMapViewDelegate, UIGestureRecognizerDe
         //mapView界面参数设置
         mapView?.compassOrigin = CGPointMake(mapView!.compassOrigin.x, 22)
         mapView?.scaleOrigin = CGPointMake(mapView!.scaleOrigin.x, 22)
-        
-//        //mapView手势识别
-//        currentPinch = UIPinchGestureRecognizer(target: self, action: Selector("handlePinch"))
-//        currentPinch?.delegate = self
-//        mapView?.addGestureRecognizer(currentPinch!)
 
         self.view.addSubview(mapView!)
         
@@ -109,11 +148,6 @@ class ViewController: UIViewController, MAMapViewDelegate, UIGestureRecognizerDe
         
         
     }
-    
-//    func handlePinch() {
-//        println("缩放手势识别")
-//        mapView!.zoomLevel = mapView!.zoomLevel * Double(currentPinch!.scale)
-//    }
     
     func buttonHandlePinchOut() {
         mapView!.zoomLevel = mapView!.zoomLevel * 0.9
