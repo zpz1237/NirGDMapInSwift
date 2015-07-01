@@ -221,6 +221,7 @@
 		DBE9A7971AFCCC610000445C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Nirvana;
 				TargetAttributes = {

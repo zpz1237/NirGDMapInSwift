@@ -29,7 +29,7 @@ class ViewController: UIViewController, MAMapViewDelegate, AMapSearchDelegate {
         
         if (currentLocation != nil) {
             
-            var request = AMapReGeocodeSearchRequest()
+            let request = AMapReGeocodeSearchRequest()
             request.location = AMapGeoPoint.locationWithLatitude(CGFloat(currentLocation!.coordinate.latitude), longitude: CGFloat(currentLocation!.coordinate.longitude))
             
             search?.AMapReGoecodeSearch(request)
@@ -49,7 +49,7 @@ class ViewController: UIViewController, MAMapViewDelegate, AMapSearchDelegate {
     }
     
     func searchRequest(request: AnyObject!, didFailWithError error: NSError!) {
-        println("\(error)")
+        print("\(error)")
     }
     
     func initSearch() {
@@ -59,10 +59,10 @@ class ViewController: UIViewController, MAMapViewDelegate, AMapSearchDelegate {
     func initControls() {
         
         //定位按钮
-        locationButton = UIButton.buttonWithType(UIButtonType.Custom) as? UIButton
+        locationButton = UIButton(type: UIButtonType.Custom)
         
         locationButton?.frame = CGRectMake(20, mapView!.bounds.height - 80, 28, 28)
-        locationButton?.autoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleTopMargin
+        locationButton?.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.FlexibleRightMargin.rawValue | UIViewAutoresizing.FlexibleTopMargin.rawValue)
         locationButton?.backgroundColor = UIColor.whiteColor()
         locationButton?.layer.cornerRadius = 5
         locationButton?.setImage(UIImage(named: "location_no"), forState: UIControlState.Normal)
@@ -72,10 +72,10 @@ class ViewController: UIViewController, MAMapViewDelegate, AMapSearchDelegate {
         mapView?.addSubview(locationButton!)
         
         //放大按钮
-        zoomButtonIn = UIButton.buttonWithType(UIButtonType.Custom) as? UIButton
+        zoomButtonIn = UIButton(type: UIButtonType.Custom)
         
         zoomButtonIn?.frame = CGRectMake(mapView!.bounds.width - 50, mapView!.bounds.height - 94, 28, 28)
-        zoomButtonIn?.autoresizingMask = UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleTopMargin
+        zoomButtonIn?.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.FlexibleLeftMargin.rawValue | UIViewAutoresizing.FlexibleTopMargin.rawValue)
         zoomButtonIn?.backgroundColor = UIColor.whiteColor()
         zoomButtonIn?.layer.cornerRadius = 5
         zoomButtonIn?.setImage(UIImage(named: "plus-128"), forState: UIControlState.Normal)
@@ -85,10 +85,10 @@ class ViewController: UIViewController, MAMapViewDelegate, AMapSearchDelegate {
         mapView?.addSubview(zoomButtonIn!)
         
         //缩小按钮
-        zoomButtonOut = UIButton.buttonWithType(UIButtonType.Custom) as? UIButton
+        zoomButtonOut = UIButton(type: UIButtonType.Custom)
         
         zoomButtonOut?.frame = CGRectMake(mapView!.bounds.width - 50, mapView!.bounds.height - 66, 28, 28)
-        zoomButtonOut?.autoresizingMask = UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleTopMargin
+        zoomButtonOut?.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.FlexibleLeftMargin.rawValue | UIViewAutoresizing.FlexibleTopMargin.rawValue)
         zoomButtonOut?.backgroundColor = UIColor.whiteColor()
         zoomButtonOut?.layer.cornerRadius = 5
         zoomButtonOut?.setImage(UIImage(named: "minus-128"), forState: UIControlState.Normal)
@@ -99,11 +99,11 @@ class ViewController: UIViewController, MAMapViewDelegate, AMapSearchDelegate {
     }
     
     func locateAction() {
-        println("点击事件成功发生")
+        print("点击事件成功发生")
         
         if mapView?.userTrackingMode != MAUserTrackingMode.Follow {
             mapView?.setUserTrackingMode(MAUserTrackingMode.Follow, animated: true)
-            println("改变模式成功")
+            print("改变模式成功")
         }
         
     }
@@ -117,17 +117,19 @@ class ViewController: UIViewController, MAMapViewDelegate, AMapSearchDelegate {
     func mapView(mapView: MAMapView!, didChangeUserTrackingMode mode: MAUserTrackingMode, animated: Bool) {
         if mode == MAUserTrackingMode.None {
             locationButton?.setImage(UIImage(named: "location_no"), forState: UIControlState.Normal)
-            println("改变图片为no")
+            print("改变图片为no")
         } else {
             locationButton?.setImage(UIImage(named: "location_yes"), forState: UIControlState.Normal)
-            println("改变图片为yes")
+            print("改变图片为yes")
         }
     }
     
     func mapView(mapView: MAMapView!, didUpdateUserLocation userLocation: MAUserLocation!, updatingLocation: Bool) {
+        
         //获取当前经纬度
         currentLocation = userLocation.location
     }
+    
     
     func initMapView() {
         
